@@ -1,7 +1,7 @@
 {
-    "name": "com.molmolgames.UnityExtendSource", <-- com.[開発者名].[パッケージ名] のように書く模様(小文字のみ「-」「.」は使える
-    "displayName": "UnityExtendSource",     <-- 任意のパッケージ名
-    "version": "1.0.0",               <-- パッケージのバージョン
-    "unity": "2019.2.3",                <-- Unityのバージョン
+    "name": "com.molmolgames.UnityExtendSource",
+    "displayName": "UnityExtendSource",
+    "version": "1.0.0",
+    "unity": "2019.2.3",
     "description": "transformなどの関数拡張"
 }
