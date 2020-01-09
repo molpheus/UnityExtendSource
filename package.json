@@ -1,6 +1,6 @@
 {
     "name": "com.molmolgames.u_ex",
-    "displayName": "UnityExtendSource",
+    "displayName": "molmolgames_ExtendSource",
     "version": "1.0.0",
     "unity": "2019.1",
     "description": "transformなどの関数拡張"
