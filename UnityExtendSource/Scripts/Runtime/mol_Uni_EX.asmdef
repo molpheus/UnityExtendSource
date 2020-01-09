@@ -1,18 +1,29 @@
 {
-    "name": "com.molmolgames.U_Ex.Standalone",
+    "name": "com.molmolgames.u_ex",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [
+        "Android",
         "Editor",
+        "iOS",
+        "LinuxStandalone64",
+        "Lumin",
         "macOSStandalone",
+        "PS4",
+        "Stadia",
+        "Switch",
+        "tvOS",
         "WSA",
+        "WebGL",
         "WindowsStandalone32",
-        "WindowsStandalone64"
+        "WindowsStandalone64",
+        "XboxOne"
     ],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }
