@@ -1,10 +1,12 @@
 {
-    "name": "com.molmolgames.u_ex.editor",
-    "references": [],
-    "includePlatforms": [],
-    "excludePlatforms": [
+    "name": "MolmolgamesEditor.u_ex",
+    "references": [
+        "molmolgames.u_ex"
+    ],
+    "includePlatforms": [
         "Editor"
     ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
