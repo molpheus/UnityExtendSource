@@ -48,7 +48,7 @@ namespace com.molmolgames.U_Ex
             "Standard Assets",
         };
 
-        [MenuItem ("ProjectBase/Create")]
+        [MenuItem ("Assets/molmolgames/ProjectBase/Create")]
         static private void Create ()
         {
             var w = EditorWindow.GetWindow<InputConfirmWindow>(true);
