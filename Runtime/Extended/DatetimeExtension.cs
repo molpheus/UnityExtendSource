@@ -1,14 +1,23 @@
 ﻿using System;
 using System.Globalization;
 
-namespace com.molmolgames.U_Ex
+namespace MolmolgamesEngine.U_Ex
 {
     public static class DatetimeExtension
     {
-        /// <summary> . </summary>
+        /// <summary> ロケーション情報. </summary>
         private static CultureInfo ci = new CultureInfo("ja-JP");
 
         private static readonly int FiscalYearStartingMonth = 4;
+
+        /// <summary>
+        /// ロケーション情報を変更する
+        /// </summary>
+        /// <param name="info"></param>
+        public static void ChangeCultureInfo(CultureInfo info)
+        {
+            ci = info;
+        }
 
         /// <summary>
         /// 該当年月の日数を返す

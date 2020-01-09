@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.IO;
 
-namespace com.molmolgames.U_Ex
+namespace MolmolgamesEngine.U_Ex
 {
     /// <summary>
     /// グラデーション

@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
+using MolmolgamesEngine.U_Ex;
 
-namespace com.molmolgames.U_Ex
+namespace MolmolgamesEditor.U_Ex
 {
-    public class GradetionEditor : UnityEditor.Editor
+    public class GradetionEditor : Editor
     {
-        [UnityEditor.MenuItem ("GameObject/UI/Gradation/GradationBar", false, 0)]
+        [MenuItem ("GameObject/UI/Molmolgames/Gradation/GradationBar", false, 0)]
         public static void CreateBar ()
         {
             var gradation = GameObject.FindObjectOfType<Gradation> ();
@@ -16,12 +16,12 @@ namespace com.molmolgames.U_Ex
                 gradation = gradationObj.AddComponent<Gradation> ();
             }
 
-            if ( UnityEditor.Selection.gameObjects.Length != 0 ) {
-                for ( int i = 0; i < UnityEditor.Selection.gameObjects.Length; i++ ) {
+            if ( Selection.gameObjects.Length != 0 ) {
+                for ( int i = 0; i < Selection.gameObjects.Length; i++ ) {
 
                     GameObject bar = new GameObject("gradationBar");
-                    bar.transform.position = UnityEditor.Selection.gameObjects[i].transform.position;
-                    bar.transform.SetParent (UnityEditor.Selection.gameObjects[i].transform);
+                    bar.transform.position = Selection.gameObjects[i].transform.position;
+                    bar.transform.SetParent (Selection.gameObjects[i].transform);
                     GradationBar gradationBar = bar.AddComponent<GradationBar>();
                     bar.AddComponent<RectTransform> ();
                     ( (RectTransform)gradationBar.transform ).sizeDelta = new Vector2 (40, 160);

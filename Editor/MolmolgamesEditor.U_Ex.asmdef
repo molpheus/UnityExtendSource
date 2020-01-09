@@ -1,7 +1,7 @@
 {
-    "name": "MolmolgamesEditor.u_ex",
+    "name": "MolmolgamesEditor.U_Ex",
     "references": [
-        "molmolgames.u_ex"
+        "GUID:f269150ce8eee164c8d87fdb185a3af3"
     ],
     "includePlatforms": [
         "Editor"

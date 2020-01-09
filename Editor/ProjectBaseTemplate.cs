@@ -4,7 +4,7 @@ using System.IO;
 using UnityEditor;
 
 #if UNITY_EDITOR
-namespace com.molmolgames.U_Ex
+namespace MolmolgamesEditor.U_Ex
 {
     /// <summary>
     /// project templeate create script

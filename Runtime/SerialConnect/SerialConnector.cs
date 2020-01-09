@@ -6,13 +6,13 @@
 * Yoshida@DigiFie
 * https://www.digifie.jp/blog/archives/1580
 **/
-using System.Collections.Generic;
 using System.Threading;
 using System.IO.Ports;
 using UnityEngine;
 
-namespace com.molmolgames.U_Ex.Standalone
+namespace MolmolgamesEngine.U_Ex
 {
+#if UNITY_EDITOR || UNITY_STANDALONE
     public class SerialConnector : MonoBehaviour
     {
 
@@ -74,9 +74,6 @@ namespace com.molmolgames.U_Ex.Standalone
                     name = string.Format ("COM{0}", number);
                 }
 
-                //Debug.Log ("name : " + name);
-
-
                 // ポート名, ボーレート, パリティチェック, データビット長, ストップビット長,
                 // 読み取り時タイムアウト, 書き込み時タイムアウトを設定してポートを開く
                 _serialPort = new SerialPort (name) {
@@ -125,39 +122,10 @@ namespace com.molmolgames.U_Ex.Standalone
             }
         }
 
-        //protected List<byte> buffer = new List<byte>();
-        //public string ReadBufferStrings()
-        //{
-        //    string str = System.Text.Encoding.ASCII.GetString (buffer.ToArray());
-        //    str = str.Replace ("\t", "\n");
-        //    return str;
-        //}
-
-        //public void ClearBuffer()
-        //{
-        //    buffer.Clear ();
-        //}
-
         // スレッドラン
         protected void run ()
         {
             while ( _isRunning && _serialPort != null && _serialPort.IsOpen ) {
-
-                // 受信バッファをクリア
-                //try {
-                //    _serialPort.DiscardInBuffer ();
-                //}
-                //catch ( System.Exception e ) {
-                //    Debug.LogWarning (e.Message);
-                //}
-
-                //if (_serialPort.BytesToRead != 0) {
-                //    byte[] buf = new  byte[_serialPort.BytesToRead];
-                //    _serialPort.Read (buf,0, _serialPort.BytesToRead);
-                //    buffer.AddRange (buf);
-                //    //Debug.Log (System.Text.Encoding.ASCII.GetString(buffer));
-                //    _serialPort.DiscardInBuffer ();
-                //}
 
                 // 指定秒数待機
                 Thread.Sleep (threadSleepTime);
@@ -179,4 +147,5 @@ namespace com.molmolgames.U_Ex.Standalone
             _serialPort.WriteLine (message);
         }
     }
+#endif
 }

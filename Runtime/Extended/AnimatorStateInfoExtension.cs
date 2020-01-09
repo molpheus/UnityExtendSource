@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace com.molmolgames.U_Ex
+namespace MolmolgamesEngine.U_Ex
 {
     /// <summary>
     /// AnimatorStateInfo の Extension
