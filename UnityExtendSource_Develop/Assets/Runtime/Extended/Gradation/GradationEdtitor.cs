@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace com.molmolgames.U_Ex.Editor
+namespace com.molmolgames.U_Ex
 {
     public class GradetionEditor : UnityEditor.Editor
     {
