@@ -12,6 +12,7 @@ using UnityEngine;
 
 namespace MolmolgamesEngine.U_Ex
 {
+#if NET_4_6
 #if UNITY_EDITOR || UNITY_STANDALONE
     public class SerialConnector : MonoBehaviour
     {
@@ -147,5 +148,6 @@ namespace MolmolgamesEngine.U_Ex
             _serialPort.WriteLine (message);
         }
     }
+#endif
 #endif
 }
