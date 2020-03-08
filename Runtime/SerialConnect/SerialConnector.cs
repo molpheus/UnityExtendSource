@@ -1,4 +1,5 @@
-﻿/**
+﻿#if NET_4_6
+/**
 * シリアル接続の基本クラス
 * 受信処理の実装は使用する機器ごとに違うので
 * このクラスを拡張して実装する
@@ -12,7 +13,6 @@ using UnityEngine;
 
 namespace MolmolgamesEngine.U_Ex
 {
-#if NET_4_6
 #if UNITY_EDITOR || UNITY_STANDALONE
     public class SerialConnector : MonoBehaviour
     {
@@ -149,5 +149,5 @@ namespace MolmolgamesEngine.U_Ex
         }
     }
 #endif
-#endif
 }
+#endif
